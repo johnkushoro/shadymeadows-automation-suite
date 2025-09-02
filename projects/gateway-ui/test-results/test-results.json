@@ -1,0 +1,160 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\John.Kushoro\\Fairstone-Automation-Test-Projects\\gateway-ui-test-automation\\projects\\gateway-ui\\playwright.config.ts",
+    "rootDir": "C:/Users/John.Kushoro/Fairstone-Automation-Test-Projects/gateway-ui-test-automation/projects/gateway-ui/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "C:\\Users\\John.Kushoro\\Fairstone-Automation-Test-Projects\\gateway-ui-test-automation\\projects\\gateway-ui\\setup\\global-setup.ts",
+    "globalTeardown": "C:\\Users\\John.Kushoro\\Fairstone-Automation-Test-Projects\\gateway-ui-test-automation\\projects\\gateway-ui\\setup\\global-teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "environment": "qa",
+      "baseUrl": "https://qa-fairstonegateway.fairstone.co.uk",
+      "timestamp": "2025-09-02T17:19:06.609Z",
+      "version": "1.0.0",
+      "project": "gateway-ui",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "failures-only",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "test-results/html-report",
+          "open": "never"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results/junit-report.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/John.Kushoro/Fairstone-Automation-Test-Projects/gateway-ui-test-automation/projects/gateway-ui/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "environment": "qa",
+          "baseUrl": "https://qa-fairstonegateway.fairstone.co.uk",
+          "timestamp": "2025-09-02T17:19:06.609Z",
+          "version": "1.0.0",
+          "project": "gateway-ui",
+          "actualWorkers": 1
+        },
+        "id": "edge",
+        "name": "edge",
+        "testDir": "C:/Users/John.Kushoro/Fairstone-Automation-Test-Projects/gateway-ui-test-automation/projects/gateway-ui/tests",
+        "testIgnore": [
+          "**/node_modules/**",
+          "**/dist/**",
+          "**/build/**",
+          "**/.git/**"
+        ],
+        "testMatch": [
+          "**/*.spec.ts",
+          "**/*.test.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.54.2",
+    "workers": 11,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "NavigateToPage.spec.ts",
+      "file": "NavigateToPage.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Page Navigation Tests",
+          "file": "NavigateToPage.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should navigate to login page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "edge",
+                  "projectName": "edge",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 23979,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Base URL from test context: https://qa-fairstonegateway.fairstone.co.uk\n"
+                        },
+                        {
+                          "text": "Current URL before navigation: about:blank\n"
+                        },
+                        {
+                          "text": "Successfully navigated to QA URL\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-02T17:19:12.434Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5384df615a95527c6ce8-8e58187a725561b3becc",
+              "file": "NavigateToPage.spec.ts",
+              "line": 12,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-09-02T17:19:06.647Z",
+    "duration": 30487.87,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

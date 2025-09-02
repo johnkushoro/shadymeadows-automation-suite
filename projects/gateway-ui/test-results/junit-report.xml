@@ -1,0 +1,12 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="30.487869999999997">
+<testsuite name="NavigateToPage.spec.ts" timestamp="2025-09-02T17:19:11.507Z" hostname="edge" tests="1" failures="0" skipped="0" time="23.979" errors="0">
+<testcase name="Page Navigation Tests › should navigate to login page" classname="NavigateToPage.spec.ts" time="23.979">
+<system-out>
+<![CDATA[Base URL from test context: https://qa-fairstonegateway.fairstone.co.uk
+Current URL before navigation: about:blank
+Successfully navigated to QA URL
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

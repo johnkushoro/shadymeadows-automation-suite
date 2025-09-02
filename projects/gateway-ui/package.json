@@ -1,0 +1,99 @@
+{
+  "name": "gateway-ui-test-project",
+  "version": "1.0.0",
+  "description": "Gateway UI Test Project using Fairstone UI Automation Framework",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist test-results",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:dev": "cross-env TEST_ENV=development playwright test",
+    "test:qa": "cross-env TEST_ENV=qa playwright test",
+    "test:prod": "cross-env TEST_ENV=production playwright test",
+    "test:chrome": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:safari": "playwright test --project=webkit",
+    "test:mobile": "playwright test --project=mobile-chrome --project=mobile-safari",
+    "test:accessibility": "playwright test --project=accessibility",
+    "test:login": "playwright test tests/login.spec.ts",
+    "test:login:headed": "playwright test tests/login.spec.ts --headed",
+    "test:login:debug": "playwright test tests/login.spec.ts --debug",
+    "test:login:ui": "playwright test tests/login.spec.ts --ui",
+    "test:login:chrome": "playwright test tests/login.spec.ts --project=chromium",
+    "test:login:firefox": "playwright test tests/login.spec.ts --project=firefox",
+    "test:login:safari": "playwright test tests/login.spec.ts --project=webkit",
+    "test:login:qa": "cross-env TEST_ENV=qa playwright test tests/login.spec.ts",
+    "test:login:prod": "cross-env TEST_ENV=production playwright test tests/login.spec.ts",
+    "test:parallel": "playwright test --workers=4",
+    "test:serial": "playwright test --workers=1",
+    "test:retry": "playwright test --retries=3",
+    "test:reporter": "playwright test --reporter=html",
+    "test:trace": "playwright test --trace=on",
+    "test:video": "playwright test --video=on",
+    "test:screenshot": "playwright test --screenshot=on",
+    "report": "playwright show-report",
+    "report:open": "playwright show-report --host=0.0.0.0 --port=9323",
+    "install:browsers": "playwright install",
+    "install:deps": "playwright install-deps",
+    "codegen": "playwright codegen",
+    "codegen:dev": "playwright codegen http://localhost:3000",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "tsc --noEmit",
+    "pre-commit": "npm run lint && npm run type-check && npm run format:check",
+    "setup": "npm install && npm run install:browsers && npm run build",
+    "setup:ci": "npm ci && npm run install:browsers && npm run build"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.53.2",
+    "@types/node": "^24.0.10",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "cross-env": "^10.0.0",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@fairstone/ui-automation-framework": "file:../../framework"
+  },
+  "private": true,
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing",
+    "ui-testing",
+    "e2e",
+    "typescript",
+    "gateway-ui"
+  ],
+  "author": "John Kushoro",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run type-check"
+    }
+  }
+}
