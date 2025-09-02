@@ -9,6 +9,7 @@ yarn-error.log*
 .pnp.js
 
 .vscode/*
+.idea/
 
 # Playwright
 node_modules/
@@ -19,3 +20,6 @@ node_modules/
 
 # Environment variables
 .env
+
+# Ignore Playwright saved session state
+storageState.json
